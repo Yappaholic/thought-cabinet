@@ -1,7 +1,7 @@
 import PavelPhoto from './pavel.jpg';
 const AboutMe = () => {
   return (
-    <div>
+    <div id="About_me">
       <h2 className="text-5xl text-green-900 ml-32">О себе</h2>
       <div className="flex flex-row gap-48 ml-32 mr-52 my-14">
         <p className="text-xl w-96">

@@ -2,6 +2,9 @@ import AboutCBT from './AboutCBT';
 import AboutMe from './AboutMe';
 import { Dots } from './Util';
 import mainImage from './main.png';
+function handleClick(id: string) {
+  document.getElementById(id)?.scrollIntoView({behavior: "smooth"});
+};
 const Header = () => {
   return (
     <header id="header" className="w-full">
@@ -10,9 +13,9 @@ const Header = () => {
           Кабинет мыслей
         </h2>
         <div className="flex flex-row gap-4 justify-items-center">
-          <button type="button" className="2xl:text-md">Главная</button>
-          <button type="button" className="2xl:text-md">Терапия</button>
-          <button type="button" className="2xl:text-md">Обо мне</button>
+          <button type="button" className="2xl:text-md" onClick={() => handleClick("Main")}>Главная</button>
+          <button type="button" className="2xl:text-md" onClick={() => handleClick("Therapy")}>Терапия</button>
+          <button type="button" className="2xl:text-md" onClick={() => handleClick("About_me")}>Обо мне</button>
           <button type="button" className="2xl:text-md">Контакты</button>
         </div>
       </div>
@@ -24,7 +27,7 @@ const Main = () => {
   return (
     <div className="bg-white min-h-svh flex flex-col gap-20">
       <Header />
-      <div className="pl-[5vw] grid grid-cols-[40vw_1fr] grid-rows-3 mr-[10vw]">
+      <div id="Main"className="pl-[5vw] grid grid-cols-[40vw_1fr] grid-rows-3 mr-[10vw]">
         <Dots />
         <div className="row-start-2 row-end-4 self-start">
           <h1 className="text-green-900 2xl:text-6xl self-center col-start-1">

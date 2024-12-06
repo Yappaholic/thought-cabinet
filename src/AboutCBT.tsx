@@ -26,7 +26,7 @@ const CBTGridItem = ({
 
 const AboutCBT = () => {
   return (
-    <div className="grid grid-cols-[25vw_repeat(3,1fr)] gap-y-32 gap-x-11 grid-rows-2 mx-28 my-48 justify-content-center">
+    <div id="Therapy" className="grid grid-cols-[25vw_repeat(3,1fr)] gap-y-32 gap-x-11 grid-rows-2 mx-28 my-48 justify-content-center">
       <div>
         <h2 className=" 2xl:text-5xl place-self-start text-green-900">
           Что такое КПТ?
