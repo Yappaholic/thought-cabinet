@@ -1,10 +1,11 @@
 import AboutCBT from './AboutCBT';
 import AboutMe from './AboutMe';
+import ContactMe from './Contacts';
 import { Dots } from './Util';
 import mainImage from './main.png';
 function handleClick(id: string) {
-  document.getElementById(id)?.scrollIntoView({behavior: "smooth"});
-};
+  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+}
 const Header = () => {
   return (
     <header id="header" className="w-full">
@@ -13,10 +14,30 @@ const Header = () => {
           Кабинет мыслей
         </h2>
         <div className="flex flex-row gap-4 justify-items-center">
-          <button type="button" className="2xl:text-md" onClick={() => handleClick("Main")}>Главная</button>
-          <button type="button" className="2xl:text-md" onClick={() => handleClick("Therapy")}>Терапия</button>
-          <button type="button" className="2xl:text-md" onClick={() => handleClick("About_me")}>Обо мне</button>
-          <button type="button" className="2xl:text-md">Контакты</button>
+          <button
+            type="button"
+            className="2xl:text-md"
+            onClick={() => handleClick('Main')}
+          >
+            Главная
+          </button>
+          <button
+            type="button"
+            className="2xl:text-md"
+            onClick={() => handleClick('Therapy')}
+          >
+            Терапия
+          </button>
+          <button
+            type="button"
+            className="2xl:text-md"
+            onClick={() => handleClick('About_me')}
+          >
+            Обо мне
+          </button>
+          <button type="button" className="2xl:text-md" onClick={() => handleClick('Contacts')}>
+            Контакты
+          </button>
         </div>
       </div>
     </header>
@@ -25,9 +46,12 @@ const Header = () => {
 
 const Main = () => {
   return (
-    <div className="bg-white min-h-svh flex flex-col gap-20">
+    <div className="bg-white min-h-svh flex flex-col gap-24">
       <Header />
-      <div id="Main"className="pl-[5vw] grid grid-cols-[40vw_1fr] grid-rows-3 mr-[10vw]">
+      <div
+        id="Main"
+        className="pl-[5vw] grid pt-4 grid-cols-[40vw_1fr] grid-rows-3 mr-[10vw]"
+      >
         <Dots />
         <div className="row-start-2 row-end-4 self-start">
           <h1 className="text-green-900 2xl:text-6xl self-center col-start-1">
@@ -45,11 +69,16 @@ const Main = () => {
           className="col-start-2 row-start-1 row-end-4"
         ></img>
       </div>
-      <button type="button" className="bg-green-900 w-[35vw] py-4 mb-10 text-3xl rounded-2xl self-center text-white">
+      <button
+        type="button"
+        className="bg-green-900 w-[35vw] py-4 mb-10 text-3xl rounded-2xl self-center text-white"
+        onClick={() => handleClick("Contacts")}
+      >
         Записаться на консультацию
       </button>
       <AboutCBT />
       <AboutMe />
+      <ContactMe />
     </div>
   );
 };
