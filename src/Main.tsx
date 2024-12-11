@@ -35,7 +35,11 @@ const Header = () => {
           >
             Обо мне
           </button>
-          <button type="button" className="2xl:text-md" onClick={() => handleClick('Contacts')}>
+          <button
+            type="button"
+            className="2xl:text-md"
+            onClick={() => handleClick('Contacts')}
+          >
             Контакты
           </button>
         </div>
@@ -64,15 +68,16 @@ const Main = () => {
         </div>
         <img
           src={mainImage}
+          alt="Павел Витко"
           width="900px"
           height="700px"
           className="col-start-2 row-start-1 row-end-4"
-        ></img>
+        />
       </div>
       <button
         type="button"
         className="bg-green-900 w-[35vw] py-4 mb-10 text-3xl rounded-2xl self-center text-white"
-        onClick={() => handleClick("Contacts")}
+        onClick={() => handleClick('Contacts')}
       >
         Записаться на консультацию
       </button>
