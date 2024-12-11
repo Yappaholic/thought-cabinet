@@ -15,7 +15,7 @@ const Form = () => {
   };
 
   return (
-    <form className="flex flex-col gap-4 overflow-hidden">
+    <form className="flex font-main flex-col gap-4 overflow-hidden">
       <div>
         <label htmlFor={nameId} className="text-blue-900">
           Имя*
@@ -57,7 +57,7 @@ const Form = () => {
         />
       </div>
       <div className="flex justify-between align-middle">
-        <p className="text-xl">* - Обязательное поле</p>
+        <p className="text-xl font-secondary">* - Обязательное поле</p>
         <button
           type="button"
           onClick={sendToBot}
@@ -79,7 +79,7 @@ const ContactMe = () => {
       <div id="top" className="flex flex-row">
         <EllipseSmall />
         <EllipseBig />
-        <h2 className="md:text-6xl text-green-900 pt-12 self-center text-center md:max-2xl:-translate-x-48">
+        <h2 className="md:text-6xl text-green-900 pt-12 self-center font-main text-center md:max-2xl:-translate-x-48">
           Получите <br /> консультацию
         </h2>
       </div>

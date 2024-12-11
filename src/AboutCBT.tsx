@@ -21,15 +21,15 @@ const CBTGridItem = ({
   const IconNode = icon;
   return (
     <div
-      className="flex flex-col gap-4 align-center justify-self-center"
+      className="flex font-main flex-col gap-4 align-center justify-self-center"
       style={{
         gridColumn: `${pos.column}/${pos.column + 1}`,
         gridRow: `${pos.row}/${pos.row + 1}`,
       }}
     >
       <IconNode />
-      <h2 className="text-xl font-bold">{header}</h2>
-      <p className="text-md">{text}</p>
+      <h2 className="text-xl font-main font-bold">{header}</h2>
+      <p className="text-md font-main">{text}</p>
     </div>
   );
 };
@@ -38,7 +38,7 @@ const AboutCBT = () => {
   return (
     <div
       id="Therapy"
-      className="grid grid-cols-[25vw_repeat(3,1fr)] bg-[#f4f6f6] gap-y-32 gap-x-11 grid-rows-2 px-28 py-48 justify-content-center"
+      className="grid grid-cols-[25vw_repeat(3,1fr)] font-main bg-[#f4f6f6] gap-y-32 gap-x-11 grid-rows-2 px-28 py-48 justify-content-center"
     >
       <div>
         <h2 className=" md:text-5xl place-self-start text-green-900">

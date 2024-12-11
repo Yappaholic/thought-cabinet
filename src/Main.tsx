@@ -15,28 +15,28 @@ const Header = () => {
         <div className="flex flex-row gap-4 justify-items-center">
           <button
             type="button"
-            className="text-md"
+            className="text-md font-secondary"
             onClick={() => navigate('Main')}
           >
             Главная
           </button>
           <button
             type="button"
-            className="text-md"
+            className="font-secondary"
             onClick={() => navigate('Therapy')}
           >
             Терапия
           </button>
           <button
             type="button"
-            className="text-md"
+            className="font-secondary"
             onClick={() => navigate('About_me')}
           >
             Обо мне
           </button>
           <button
             type="button"
-            className="text-md"
+            className="font-secondary"
             onClick={() => navigate('Contacts')}
           >
             Контакты
@@ -56,10 +56,10 @@ const MainCover = () => {
       >
         <Dots />
         <div className="row-start-2 row-end-4 self-start">
-          <h1 className="text-green-900 lg:text-6xl self-center col-start-1">
+          <h1 className="text-green-900 lg:text-6xl font-main self-center col-start-1">
             Кабинет мыслей
           </h1>
-          <p className="text-2xl py-12 row-start-3">
+          <p className="text-2xl py-12 row-start-3 font-secondary">
             Помогаю справляться с тревогой, <br />
             стрессом и негативными мыслями.
           </p>
@@ -74,7 +74,7 @@ const MainCover = () => {
       </div>
       <button
         type="button"
-        className="bg-green-900 w-[35vw] py-4 mb-10 text-3xl rounded-2xl self-center text-white"
+        className="bg-green-900 w-[35vw] py-4 mb-10 text-3xl font-main rounded-2xl self-center text-white"
         onClick={() => navigate('Contacts')}
       >
         Записаться на консультацию

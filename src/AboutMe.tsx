@@ -2,9 +2,9 @@ import PavelPhoto from './pavel.jpg';
 const AboutMe = () => {
   return (
     <div id="About_me">
-      <h2 className="text-6xl text-center text-green-900">О себе</h2>
+      <h2 className="text-6xl text-center font-main text-green-900">О себе</h2>
       <div className="flex justify-center gap-48 md:max-xl:gap-24 mx-32 my-14">
-        <p className="text-xl md:max-xl:text-lg w-96 text-emerald-950">
+        <p className="text-xl font-secondary md:max-xl:text-lg w-96 text-emerald-950">
           В данный момент углубленно изучаю когнитивно-поведенческую терапию
           (КПТ) и транзактный анализ. Эти подходы позволяют мне лучше понять,
           как взаимодействуют мысли, эмоции и поведение.
