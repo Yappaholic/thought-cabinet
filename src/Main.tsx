@@ -9,35 +9,32 @@ function handleClick(id: string) {
 const Header = () => {
   return (
     <header id="header" className="w-full">
-      <div className="flex flex-row pt-2 justify-between justify-items-center self-center 2xl:w-[60vw]">
-        <h2 className="pl-[5vw] 2xl:text-2xl place-self-start text-green-900">
-          Кабинет мыслей
-        </h2>
+      <div className="flex flex-row pt-2 justify-center justify-items-center self-center xl:w-full">
         <div className="flex flex-row gap-4 justify-items-center">
           <button
             type="button"
-            className="2xl:text-md"
+            className="xl:text-md"
             onClick={() => handleClick('Main')}
           >
             Главная
           </button>
           <button
             type="button"
-            className="2xl:text-md"
+            className="xl:text-md"
             onClick={() => handleClick('Therapy')}
           >
             Терапия
           </button>
           <button
             type="button"
-            className="2xl:text-md"
+            className="xl:text-md"
             onClick={() => handleClick('About_me')}
           >
             Обо мне
           </button>
           <button
             type="button"
-            className="2xl:text-md"
+            className="xl:text-md"
             onClick={() => handleClick('Contacts')}
           >
             Контакты
@@ -58,7 +55,7 @@ const Main = () => {
       >
         <Dots />
         <div className="row-start-2 row-end-4 self-start">
-          <h1 className="text-green-900 2xl:text-6xl self-center col-start-1">
+          <h1 className="text-green-900 xl:text-6xl self-center col-start-1">
             Кабинет мыслей
           </h1>
           <p className="text-2xl py-12 row-start-3">

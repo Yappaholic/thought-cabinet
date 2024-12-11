@@ -5,12 +5,19 @@ type Position = {
   column: number;
 };
 
+interface GridItemProps {
+  header: string,
+  text: string,
+  pos: Position,
+  icon?: React.FC
+}
+
 const CBTGridItem = ({
   header,
   text,
   pos,
-  icon,
-}: { header: string; text: string; pos: Position; icon: React.FC }) => {
+  icon = Icon,
+}: GridItemProps ) => {
   const IconNode = icon;
   return (
     <div
