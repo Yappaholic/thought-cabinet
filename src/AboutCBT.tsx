@@ -41,7 +41,7 @@ const AboutCBT = () => {
       className="grid grid-cols-[25vw_repeat(3,1fr)] bg-[#f4f6f6] gap-y-32 gap-x-11 grid-rows-2 px-28 py-48 justify-content-center"
     >
       <div>
-        <h2 className=" 2xl:text-5xl place-self-start text-green-900">
+        <h2 className=" md:text-5xl place-self-start text-green-900">
           Что такое КПТ?
         </h2>
         <p className="pt-4 text-xl">
@@ -51,7 +51,7 @@ const AboutCBT = () => {
         </p>
       </div>
       <div className="row-start-2 row-end-3">
-        <h2 className=" 2xl:text-5xl place-self-start text-green-900">
+        <h2 className=" md:text-5xl place-self-start text-green-900">
           Что решает КПТ?
         </h2>
         <p className="pt-4 text-xl">

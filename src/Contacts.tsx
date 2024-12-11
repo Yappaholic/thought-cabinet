@@ -50,10 +50,8 @@ const Form = () => {
         </label>
         <br />
         <textarea
-          className="bg-transparent border-gray-400 border max-w-[calc(100%-2rem)] box-border text-md resize-none"
+          className="bg-transparent border-gray-400 border min-w-48 max-w-[calc(100%-2rem)] box-border text-md resize-none"
           id={requestId}
-          rows={6}
-          cols={60}
           aria-label="Request field"
           onChange={(e) => changeRequest(e.target.value)}
         />
@@ -81,7 +79,7 @@ const ContactMe = () => {
       <div id="top" className="flex flex-row">
         <EllipseSmall />
         <EllipseBig />
-        <h2 className="2xl:text-6xl text-green-900 pt-12 self-center text-center">
+        <h2 className="md:text-6xl text-green-900 pt-12 self-center text-center md:max-2xl:-translate-x-48">
           Получите <br /> консультацию
         </h2>
       </div>
