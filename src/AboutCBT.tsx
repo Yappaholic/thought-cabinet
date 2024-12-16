@@ -22,7 +22,7 @@ const CBTGridItem = ({
 }: GridItemProps ) => {
   return (
     <div
-      className="flex font-main flex-col gap-4 align-center justify-self-center"
+      className="grid grid-rows-[2rem,3.5rem,1fr] font-main flex-col gap-4 justify-start"
       style={{
         gridColumn: `${pos.column}/${pos.column + 1}`,
         gridRow: `${pos.row}/${pos.row + 1}`,
@@ -30,13 +30,14 @@ const CBTGridItem = ({
     >
       {icon}
       <h2 className="text-xl font-main font-bold">{header}</h2>
-      <p className="text-md font-main">{text}</p>
+      <p className="text-md font-secondary">{text}</p>
     </div>
   );
 };
 
 const AboutCBT = () => {
   return (
+    <>
     <div
       id="Therapy"
       className="grid grid-cols-[25vw_repeat(3,1fr)] font-main bg-[#f4f6f6] gap-y-32 gap-x-11 grid-rows-2 px-28 py-48 justify-content-center"
@@ -88,6 +89,7 @@ const AboutCBT = () => {
         icon={<FontAwesomeIcon icon={faPersonHarassing} size="2xl" className="self-start"/>}
       />
     </div>
+    </>
   );
 };
 export default AboutCBT;

@@ -56,7 +56,7 @@ const MainCover = () => {
       >
         <Dots />
         <div className="row-start-2 row-end-4 self-start">
-          <h1 className="text-green-900 lg:text-6xl font-main self-center col-start-1">
+          <h1 className="text-green-900 md:text-6xl font-main self-center col-start-1">
             Кабинет мыслей
           </h1>
           <p className="text-2xl py-12 row-start-3 font-secondary">
@@ -66,10 +66,8 @@ const MainCover = () => {
         </div>
         <img
           src={mainImage}
-          alt="Павел Витко"
-          width="900px"
-          height="700px"
-          className="col-start-2 row-start-1 row-end-4"
+          alt="Cognitive-Behavioral therapy"
+          className="col-start-2 row-start-2 lg:row-start-1 row-end-4 self-center max-w-[50vw] max-h-[30vw] aspect-square"
         />
       </div>
       <button
