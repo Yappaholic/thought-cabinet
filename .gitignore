@@ -1,4 +1,6 @@
 node_modules
 dist
 .firebase
+.firebaserc
 firebase.json
+src/pavel.jpg
