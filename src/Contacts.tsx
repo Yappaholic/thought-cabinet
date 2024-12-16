@@ -1,75 +1,26 @@
 // 24 margin
-import { useId, useState } from 'react';
 import { Brain, EllipseBig, EllipseSmall } from './Util';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTelegram, faInstagram, faViber } from '@fortawesome/free-brands-svg-icons';
 
-const Form = () => {
-  const [name, changeName] = useState<string>('');
-  const [contact, changeContact] = useState<string>('');
-  const [request, changeRequest] = useState<string>('');
-  const nameId = useId();
-  const contactId = useId();
-  const requestId = useId();
-
-  const sendToBot = () => {
-    console.log(name, contact, request);
-  };
-
+const Contacts = () => {
   return (
-    <form className="flex font-main flex-col gap-4 overflow-hidden">
-      <div>
-        <label htmlFor={nameId} className="text-blue-900">
-          Имя*
-        </label>
-        <br />
-        <input
-          required
-          className="bg-transparent border-gray-400 border p-2 text-xl"
-          type="text"
-          id={nameId}
-          alt="Name field"
-          onChange={(e) => changeName(e.target.value)}
-        />
-      </div>
-      <div>
-        <label htmlFor={contactId} className="text-blue-900">
-          Telegram/Instagram/Viber*
-        </label>
-        <br />
-        <input
-          required
-          className="bg-transparent border-gray-400 border p-2 text-xl"
-          type="text"
-          id={contactId}
-          alt="Contact field"
-          onChange={(e) => changeContact(e.target.value)}
-        />
-      </div>
-      <div>
-        <label htmlFor={requestId} className="text-blue-900">
-          Ваш запрос
-        </label>
-        <br />
-        <textarea
-          className="bg-transparent border-gray-400 border min-w-48 max-w-[calc(100%-2rem)] box-border text-md resize-none"
-          id={requestId}
-          aria-label="Request field"
-          onChange={(e) => changeRequest(e.target.value)}
-        />
-      </div>
-      <div className="flex justify-between align-middle">
-        <p className="text-xl font-secondary">* - Обязательное поле</p>
-        <button
-          type="button"
-          onClick={sendToBot}
-          className="px-6 py-2 bg-green-900 text-white rounded-md mr-8"
-        >
-          Отправить
-        </button>
-      </div>
-    </form>
+    <div className="flex flex-col gap-8 max-w-72">
+      <button type="button" className="border-2 hover:scale-105 transition py-4 px-2 gap-4 flex">
+        <FontAwesomeIcon icon={faTelegram} size="2xl"/>
+        <p className="text-3xl">Telegram</p>
+      </button>
+      <button type="button" className="border-2 hover:scale-105 transition py-4 px-2 gap-4 flex">
+        <FontAwesomeIcon icon={faInstagram} size="2xl"/>
+        <p className="text-3xl">Instagram</p>
+      </button>
+      <button type="button" className="border-2 hover:scale-105 transition py-4 px-2 gap-4 flex">
+        <FontAwesomeIcon icon={faViber} size="2xl"/>
+        <p className="text-3xl">Viber</p>
+      </button>
+    </div>
   );
 };
-
 const ContactMe = () => {
   return (
     <div
@@ -83,9 +34,9 @@ const ContactMe = () => {
           Получите <br /> консультацию
         </h2>
       </div>
-      <div id="bottom" className="grid grid-cols-[35vw_1fr]">
+      <div id="bottom" className="grid grid-cols-[35vw_1fr] items-center">
         <Brain />
-        <Form />
+        <Contacts />
       </div>
     </div>
   );
