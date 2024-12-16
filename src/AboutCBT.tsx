@@ -1,4 +1,6 @@
 import { Icon } from './Util';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faThumbsUp, faGears, faBrain, faHeadSideVirus, faFaceFrown, faPersonHarassing } from '@fortawesome/free-solid-svg-icons';
 
 type Position = {
   row: number;
@@ -9,16 +11,15 @@ interface GridItemProps {
   header: string,
   text: string,
   pos: Position,
-  icon?: React.FC
+  icon?: React.ReactElement
 }
 
 const CBTGridItem = ({
   header,
   text,
   pos,
-  icon = Icon,
+  icon = <Icon/>,
 }: GridItemProps ) => {
-  const IconNode = icon;
   return (
     <div
       className="flex font-main flex-col gap-4 align-center justify-self-center"
@@ -27,7 +28,7 @@ const CBTGridItem = ({
         gridRow: `${pos.row}/${pos.row + 1}`,
       }}
     >
-      <IconNode />
+      {icon}
       <h2 className="text-xl font-main font-bold">{header}</h2>
       <p className="text-md font-main">{text}</p>
     </div>
@@ -50,51 +51,41 @@ const AboutCBT = () => {
           поведение
         </p>
       </div>
-      <div className="row-start-2 row-end-3">
-        <h2 className=" md:text-5xl place-self-start text-green-900">
-          Что решает КПТ?
-        </h2>
-        <p className="pt-4 text-xl">
-          КПТ помогает справляться с эмоциональными трудностями, улучшать
-          психологическое состояние и менять деструктивные шаблоны мышления и
-          поведения
-        </p>
-      </div>
       <CBTGridItem
         header="Фокус на решениях"
         text="Вместо анализа прошлого терапия сосредоточена на текущих проблемах и поиске практических решений"
         pos={{ row: 1, column: 2 }}
-        icon={Icon}
+        icon={<FontAwesomeIcon icon={faThumbsUp} size="2xl" className="self-start"/>}
       />
       <CBTGridItem
         header="Навыки на всю жизнь"
         text="Вы приобретете техники, которые помогают справляться с трудностями самостоятельно и после завершения терапии"
         pos={{ row: 1, column: 3 }}
-        icon={Icon}
+        icon={<FontAwesomeIcon icon={faGears} size="2xl" className="self-start"/>}
       />
       <CBTGridItem
         header="Эффективность"
         text="КПТ обычно занимает меньше времени, чем другие методы, принося видимые результаты уже через несколько сессий"
         pos={{ row: 1, column: 4 }}
-        icon={Icon}
+        icon={<FontAwesomeIcon icon={faBrain} size="2xl" className="self-start"/>}
       />
       <CBTGridItem
         header="Тревога и стресс"
         text="КПТ учит управлять тревожными мыслями, снижать уровень стресса и развивать чувство контроля над ситуацией"
         pos={{ row: 2, column: 2 }}
-        icon={Icon}
+        icon={<FontAwesomeIcon icon={faHeadSideVirus} size="2xl" className="self-start"/>}
       />
       <CBTGridItem
         header="Депрессия"
         text="Помогает изменить негативное мышление и привычки, которые усиливают подавленное состояние"
         pos={{ row: 2, column: 3 }}
-        icon={Icon}
+        icon={<FontAwesomeIcon icon={faFaceFrown} size="2xl" className="self-start"/>}
       />
       <CBTGridItem
         header="Низкая самооценка"
         text=" Улучшает самооценку, формирует здоровые убеждения о себе и окружающем мире"
         pos={{ row: 2, column: 4 }}
-        icon={Icon}
+        icon={<FontAwesomeIcon icon={faPersonHarassing} size="2xl" className="self-start"/>}
       />
     </div>
   );
