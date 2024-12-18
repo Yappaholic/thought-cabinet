@@ -5,7 +5,7 @@ import { faTelegram, faInstagram, faViber } from '@fortawesome/free-brands-svg-i
 
 const Contacts = () => {
   return (
-    <div className="flex flex-col gap-8 max-w-72">
+    <div className="flex flex-col gap-8 max-w-72 font-secondary">
       <button type="button" className="border-2 hover:scale-105 transition py-4 px-2 gap-4 flex">
         <FontAwesomeIcon icon={faTelegram} size="2xl"/>
         <p className="text-3xl">Telegram</p>
@@ -30,11 +30,11 @@ const ContactMe = () => {
       <div id="top" className="flex flex-row">
         <EllipseSmall />
         <EllipseBig />
-        <h2 className="md:text-6xl text-green-900 pt-12 self-center font-main text-center md:max-2xl:-translate-x-48">
+        <h2 className="md:text-6xl text-special pt-12 self-center font-main text-center md:max-2xl:-translate-x-48">
           Получите <br /> консультацию
         </h2>
       </div>
-      <div id="bottom" className="grid grid-cols-[35vw_1fr] items-center">
+      <div id="bottom" className="grid grid-cols-2 items-center">
         <Brain />
         <Contacts />
       </div>

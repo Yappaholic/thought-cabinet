@@ -29,8 +29,8 @@ const CBTGridItem = ({
       }}
     >
       {icon}
-      <h2 className="text-xl font-main font-bold">{header}</h2>
-      <p className="text-md font-secondary">{text}</p>
+      <h2 className="text-xl font-main font-bold text-grey-secondary-title">{header}</h2>
+      <p className="text-md font-secondary text-grey-secondary">{text}</p>
     </div>
   );
 };
@@ -40,13 +40,13 @@ const AboutCBT = () => {
     <>
     <div
       id="Therapy"
-      className="grid grid-cols-[25vw_repeat(3,1fr)] font-main bg-[#f4f6f6] gap-y-32 gap-x-11 grid-rows-2 px-28 py-48 justify-content-center"
+      className="grid grid-cols-[25vw_repeat(3,1fr)] font-main bg-[#f4f6f6] gap-y-32 gap-x-11 grid-rows-2 px-14 py-48 justify-content-center"
     >
       <div>
-        <h2 className=" md:text-5xl place-self-start text-green-900">
+        <h2 className="md:text-5xl place-self-start text-special">
           Что такое КПТ?
         </h2>
-        <p className="pt-4 text-xl">
+        <p className="pt-4 text-xl text-[#2B2B2D]">
           Когнитивно-поведенческая терапия основана на научно доказанных методах
           и помогает изменять негативные мысли, которые влияют на эмоции и
           поведение
